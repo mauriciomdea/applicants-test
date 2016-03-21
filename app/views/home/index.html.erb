@@ -1,7 +1,7 @@
 <%= form_tag("/models", method: :post) do %>
   <p>
     <label>Escolha a Fabricante:</label>
-    <%= select_tag "webmotors_make_id", options_from_collection_for_select(@makers, "webmotors_id", "name") %>
+    <%= select_tag "webmotors_maker_id", options_from_collection_for_select(@makers, "webmotors_id", "name") %>
   </p>
   <%= submit_tag("Buscar modelos") %>
 <% end %>
