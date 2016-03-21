@@ -42,10 +42,12 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 
-group :test do
+group :development, :test do
   gem 'rspec-rails'
+  # A library for setting up Ruby objects as test data.
+  # https://github.com/thoughtbot/factory_girl
+  gem 'factory_girl_rails'
+  # Loads environment variables from .env
+  # https://github.com/bkeepers/dotenv
+  gem 'dotenv-rails'
 end
-
-# Loads environment variables from .env
-# https://github.com/bkeepers/dotenv
-gem 'dotenv-rails', :groups => [:development, :test]

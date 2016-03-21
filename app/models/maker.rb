@@ -1,4 +1,6 @@
-class Make < ActiveRecord::Base
+class Maker < ActiveRecord::Base
+
+  has_many :models
 
   def self.update_makers 
 
@@ -9,7 +11,7 @@ class Make < ActiveRecord::Base
 
     # Iterates results and checks if they all exist in the DB and creates new records as needed
     json.each do |maker_params|
-      Make.find_or_create_by(name: maker_params["Nome"], webmotors_id: maker_params["Id"])
+      Maker.find_or_create_by(name: maker_params["Nome"], webmotors_id: maker_params["Id"])
     end
 
   end

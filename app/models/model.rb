@@ -1,5 +1,7 @@
 class Model < ActiveRecord::Base
 
+  belongs_to :maker
+
   def self.update_models(maker)
 
     # Look for models at Webmotors site
