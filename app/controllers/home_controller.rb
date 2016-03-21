@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   def index
 
     # Search the maker
-    uri = URI("http://www.webmotors.com.br/carro/marcas")
+    uri = URI(ENV['WEBMOTORS_MARCAS_URI'])
 
     # Make request for Webmotors site
     response = Net::HTTP.post_form(uri, {})

@@ -45,3 +45,7 @@ end
 group :test do
   gem 'rspec-rails'
 end
+
+# Loads environment variables from .env
+# https://github.com/bkeepers/dotenv
+gem 'dotenv-rails', :groups => [:development, :test]

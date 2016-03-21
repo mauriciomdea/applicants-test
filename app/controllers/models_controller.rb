@@ -3,7 +3,7 @@ class ModelsController < ApplicationController
   def index
 
     # Search the models
-    uri = URI("http://www.webmotors.com.br/carro/modelos")
+    uri = URI(ENV['WEBMOTORS_MODELOS_URI'])
 
     # Make request for Webmotors site
     maker = Make.where(webmotors_id: params[:webmotors_make_id])[0]
