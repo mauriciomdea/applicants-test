@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
   root "home#index"
-  get "/models" => "models#index"
+  post "/models" => "models#index"
 
 end
