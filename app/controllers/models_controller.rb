@@ -16,7 +16,7 @@ class ModelsController < ApplicationController
       Model.find_or_create_by(make_id: maker.id, name: model["Nome"])
     end
 
-  @models = Model.where(make_id: maker.id)
+    @models = Model.where(make_id: maker.id)
 
   end
 
