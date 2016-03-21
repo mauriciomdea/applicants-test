@@ -2,9 +2,8 @@ class HomeController < ApplicationController
   
   def index
 
-    Make.update_makers
-
-    @makers = Make.all
+    Maker.update_makers
+    @makers = Maker.order(:name)
 
   end
 

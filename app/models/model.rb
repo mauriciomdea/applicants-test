@@ -11,7 +11,7 @@ class Model < ActiveRecord::Base
 
     # Iterates results and creates new models that aren't persisted yet
     models_json.each do |model|
-      Model.find_or_create_by(make_id: maker.id, name: model["Nome"])
+      Model.find_or_create_by(maker_id: maker.id, name: model["Nome"])
     end
 
   end

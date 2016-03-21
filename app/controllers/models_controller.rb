@@ -2,9 +2,9 @@ class ModelsController < ApplicationController
   
   def index
 
-    maker = Make.find_by(webmotors_id: maker_params[:webmotors_maker_id])
+    maker = Maker.find_by(webmotors_id: maker_params[:webmotors_maker_id])
     Model.update_models(maker)
-    @models = Model.where(make_id: maker.id)
+    @models = maker.models.order(:name)
 
   end
 
